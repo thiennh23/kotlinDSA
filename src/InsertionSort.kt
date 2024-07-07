@@ -1,12 +1,21 @@
+import kotlin.random.Random
+
 fun main() {
-    var array = arrayOf(12, 11, 13, 5, 6)
-    println("Unsorted array: ${array.joinToString(", ")}")
-    insertionSort(array)
-    println("Sorted array: ${array.joinToString(", ")}")
+
+    val min = 0
+    val max = 1000
+    val size = 100
+    val array = randomArray(size, min, max)
+   // var arraySorted: Array<Int>
+
      for (i in array) print("$i ")
      println()
-     array = insertionSort(array)
-     for (i in array) print("$i ")
+    var arraySorted = insertionSort(array)
+     for (i in arraySorted) print("$i ")
+}
+
+fun randomArray(size: Int, min: Int, max: Int): Array<Int> {
+    return Array(size) { Random.nextInt(min, max) }
 }
 
 fun insertionSort(arr: Array<Int>): Array<Int> {
