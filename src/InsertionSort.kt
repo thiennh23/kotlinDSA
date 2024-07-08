@@ -5,7 +5,7 @@ fun main() {
     val min = 0
     val max = 1000
     val size = 100
-    val array = randomArray(size, min, max)
+    val array = randomArrayInsertionSort(size, min, max)
    // var arraySorted: Array<Int>
 
      for (i in array) print("$i ")
@@ -14,7 +14,7 @@ fun main() {
      for (i in arraySorted) print("$i ")
 }
 
-fun randomArray(size: Int, min: Int, max: Int): Array<Int> {
+fun randomArrayInsertionSort(size: Int, min: Int, max: Int): Array<Int> {
     return Array(size) { Random.nextInt(min, max) }
 }
 
