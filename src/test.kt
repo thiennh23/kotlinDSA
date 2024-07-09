@@ -24,6 +24,14 @@ fun main() {
 
     var a: String? = "ABC"
     println(a)
+    println(a?.length)
     a = null
     println(a)
+    println(a?.length)
+
+    var favoriteActor: String? = "null"
+    //println(favoriteActor!!.length)
+    var numer = favoriteActor?.length ?: 0
+    println(numer)
+
 }
